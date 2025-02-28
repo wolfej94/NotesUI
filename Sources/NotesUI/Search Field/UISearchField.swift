@@ -115,6 +115,11 @@ public class UISearchField: UIView {
             searchBar.layer.cornerRadius = 8
         }
     }
+    
+    public func cancelEditing() {
+        searchBar.searchTextField.text = ""
+        searchBar.resignFirstResponder()
+    }
 }
 
 extension UISearchField: UISearchBarDelegate {
